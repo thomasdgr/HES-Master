@@ -1,0 +1,59 @@
+openapi: 3.0.0
+info:
+  title: Restaurant API
+  version: 1.0.0
+paths:
+  /restaurants:
+    get:
+      summary: Get all restaurants
+      operationId: listRestaurants
+      responses:
+        '200':
+          description: Successful operation
+  /grade:
+    post:
+      summary: Add a grade to a restaurant
+      operationId: addGrade
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Grade'
+      responses:
+        '200':
+          description: Successful operation
+  /mean:
+    get:
+      summary: Get mean grades for all restaurants
+      operationId: listMean
+      responses:
+        '200':
+          description: Successful operation
+  /restaurants/sort_alpha:
+    get:
+      summary: Sort restaurants alphabetically
+      operationId: sortRestaurantsAlpha
+      responses:
+        '200':
+          description: Successful operation
+  /restaurants/sort_mean:
+    get:
+      summary: Sort restaurants by mean grade
+      operationId: sortRestaurantsMean
+      responses:
+        '200':
+          description: Successful operation
+components:
+  schemas:
+    Grade:
+      type: object
+      properties:
+        resto:
+          type: string
+        name:
+          type: string
+        grade:
+          type: integer
+          minimum: 1
+          maximum: 5

@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "agilneva-fe": "file:frontend/api_rest/showcase/agilneva-fe"
+  }
+}

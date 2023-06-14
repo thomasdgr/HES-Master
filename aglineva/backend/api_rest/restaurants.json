@@ -1,0 +1,442 @@
+{
+    "Bamee Bistro": [
+        {
+            "Alice": 4
+        },
+        {
+            "Bob": 3
+        },
+        {
+            "Claire": 5
+        }
+    ],
+    "Bread Store": [
+        {
+            "Emma": 5
+        },
+        {
+            "Gabriel": 4
+        },
+        {
+            "Julie": 4
+        }
+    ],
+    "Zymi": [
+        {
+            "Lucas": 5
+        },
+        {
+            "Manon": 2
+        },
+        {
+            "Nathan": 3
+        }
+    ],
+    "Mauro Traiteur": [
+        {
+            "Camille": 4
+        },
+        {
+            "Hugo": 5
+        },
+        {
+            "Laura": 4
+        }
+    ],
+    "Non Solo": [
+        {
+            "Louis": 3
+        },
+        {
+            "Chlo\u00e9": 2
+        },
+        {
+            "Mathis": 4
+        }
+    ],
+    "Coffee Page": [
+        {
+            "In\u00e8s": 4
+        },
+        {
+            "Th\u00e9o": 5
+        },
+        {
+            "L\u00e9a": 3
+        }
+    ],
+    "L\u2019Auberge de l\u2019Abbaye de Montheron": [
+        {
+            "Eva": 5
+        },
+        {
+            "Noah": 4
+        },
+        {
+            "Emma": 5
+        }
+    ],
+    "Le Nandanam": [
+        {
+            "Enzo": 3
+        },
+        {
+            "Lola": 2
+        },
+        {
+            "Hugo": 4
+        }
+    ],
+    "Cut Pizza": [
+        {
+            "Alice": 4
+        },
+        {
+            "Gabriel": 3
+        },
+        {
+            "Chlo\u00e9": 4
+        }
+    ],
+    "Belga": [
+        {
+            "Louis": 5
+        },
+        {
+            "L\u00e9a": 4
+        },
+        {
+            "Mathis": 4
+        }
+    ],
+    "La Grappe d\u2019Or": [
+        {
+            "In\u00e8s": 3
+        },
+        {
+            "Th\u00e9o": 2
+        },
+        {
+            "Emma": 4
+        }
+    ],
+    "Au Chat Noir": [
+        {
+            "Eva": 4
+        },
+        {
+            "Noah": 5
+        },
+        {
+            "Camille": 3
+        }
+    ],
+    "Les Rues de Saigon": [
+        {
+            "Enzo": 5
+        },
+        {
+            "Lola": 4
+        },
+        {
+            "Hugo": 5
+        }
+    ],
+    "B\u1ebfp Vi\u1ec7t": [
+        {
+            "Alice": 3
+        },
+        {
+            "Bob": 2
+        },
+        {
+            "Claire": 4
+        }
+    ],
+    "L\u2019Atelier des Gourmands": [
+        {
+            "Emma": 4
+        },
+        {
+            "Gabriel": 5
+        },
+        {
+            "Julie": 3
+        }
+    ],
+    "Amici": [
+        {
+            "Lucas": 4
+        },
+        {
+            "Manon": 3
+        },
+        {
+            "Nathan": 4
+        }
+    ],
+    "Tayta Empanadas Artisanales p\u00e9ruviennes": [
+        {
+            "Camille": 5
+        },
+        {
+            "Hugo": 4
+        },
+        {
+            "Laura": 5
+        }
+    ],
+    "Kimi Juice Ananas": [
+        {
+            "Louis": 3
+        },
+        {
+            "Chlo\u00e9": 4
+        },
+        {
+            "Mathis": 3
+        }
+    ],
+    "Le Pointu": [
+        {
+            "In\u00e8s": 4
+        },
+        {
+            "Th\u00e9o": 3
+        },
+        {
+            "L\u00e9a": 5
+        }
+    ],
+    "La Brasserie de Paudex": [
+        {
+            "Eva": 5
+        },
+        {
+            "Noah": 4
+        },
+        {
+            "Emma": 5
+        }
+    ],
+    "Osio": [
+        {
+            "Enzo": 3
+        },
+        {
+            "Lola": 4
+        },
+        {
+            "Hugo": 2
+        }
+    ],
+    "Doki Doki": [
+        {
+            "Alice": 4
+        },
+        {
+            "Gabriel": 3
+        },
+        {
+            "Chlo\u00e9": 4
+        }
+    ],
+    "Jacques": [
+        {
+            "Louis": 5
+        },
+        {
+            "L\u00e9a": 4
+        },
+        {
+            "Mathis": 4
+        }
+    ],
+    "Pasta e Sfizi": [
+        {
+            "In\u00e8s": 3
+        },
+        {
+            "Th\u00e9o": 2
+        },
+        {
+            "Emma": 4
+        }
+    ],
+    "Sedef": [
+        {
+            "Eva": 4
+        },
+        {
+            "Noah": 5
+        },
+        {
+            "Camille": 3
+        }
+    ],
+    "Street Cellar": [
+        {
+            "Enzo": 5
+        },
+        {
+            "Lola": 4
+        },
+        {
+            "Hugo": 5
+        }
+    ],
+    "La Couronne d\u2019Or": [
+        {
+            "Alice": 3
+        },
+        {
+            "Bob": 2
+        },
+        {
+            "Claire": 4
+        }
+    ],
+    "Le Montriond": [
+        {
+            "Emma": 4
+        },
+        {
+            "Gabriel": 5
+        },
+        {
+            "Julie": 3
+        }
+    ],
+    "La Brasserie de Montbenon": [
+        {
+            "Lucas": 4
+        },
+        {
+            "Manon": 3
+        },
+        {
+            "Nathan": 4
+        }
+    ],
+    "Le Caf\u00e9 Saint Pierre": [
+        {
+            "Camille": 5
+        },
+        {
+            "Hugo": 4
+        },
+        {
+            "Laura": 5
+        }
+    ],
+    "Non-Stop \u00e0 Lutry": [
+        {
+            "Louis": 3
+        },
+        {
+            "Chlo\u00e9": 4
+        },
+        {
+            "Mathis": 3
+        }
+    ],
+    "Ta Cave": [
+        {
+            "In\u00e8s": 4
+        },
+        {
+            "Th\u00e9o": 3
+        },
+        {
+            "L\u00e9a": 5
+        }
+    ],
+    "L\u2019Auberge de Beaulieu": [
+        {
+            "Eva": 5
+        },
+        {
+            "Noah": 4
+        },
+        {
+            "Emma": 5
+        }
+    ],
+    "Le Caf\u00e9 de Grancy": [
+        {
+            "Alain": 3
+        },
+        {
+            "Lola": 4
+        },
+        {
+            "Hugo": 2
+        }
+    ],
+    "L\u2019Esquisse": [
+        {
+            "Alice": 4
+        },
+        {
+            "Gabriel": 3
+        },
+        {
+            "Chlo\u00e9": 4
+        }
+    ],
+    "OliMy B\u00e1nh M\u00ec": [
+        {
+            "Louis": 5
+        },
+        {
+            "L\u00e9a": 4
+        },
+        {
+            "Mathis": 4
+        }
+    ],
+    "La Brasserie du Cygne": [
+        {
+            "In\u00e8s": 3
+        },
+        {
+            "Th\u00e9o": 2
+        },
+        {
+            "Emma": 4
+        }
+    ],
+    "Le Milan": [
+        {
+            "Eva": 4
+        },
+        {
+            "Noah": 5
+        },
+        {
+            "Camille": 3
+        }
+    ],
+    "Le Caf\u00e9 des Artisans": [
+        {
+            "Enzo": 5
+        },
+        {
+            "Lola": 4
+        },
+        {
+            "Hugo": 5
+        }
+    ],
+    "Le Great Escape": [
+        {
+            "Pierre": 5
+        },
+        {
+            "Cailloux": 4
+        },
+        {
+            "Stephan": 5
+        }
+    ]
+}

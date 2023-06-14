@@ -1,0 +1,22 @@
+
+1) Instanced Based Learning VS Model Based Learning
+
+    a - An instanced based learning will memorize all data from training and use all data trained to predict the output. 
+        whereas a Model Based Learning create a model from data and use it to predict the output.
+
+    b - For KNN we use all data from training to predict the output of data tested so it's an Instanced Based Learning.
+
+    c - As we saw, with KNN, we can predict a category (label for ex3) or a numerical value (mean for ex5)
+        So we can use them both depending what problem we want to solve.
+
+    d - Larger K values are beneficial when the accurary increases thanks to more neighbors
+
+    e - Larger K values are detrimental when the accurary decreases because of too much neighbors. For example, when K is equal to the number of training 
+        points, prediction function is constant.
+    
+    f - When two classes have the same number of votes, we have to choose a tie-break.
+
+    g - When we have a classification problem with a lot of classes, it's need a lot of training datas. As the KNN is 
+        instanced based learning with O(N) complexity, prediction will take too much time.
+
+
