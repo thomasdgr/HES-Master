@@ -1,0 +1,128 @@
+openapi: 3.0.3
+info:
+  title: Super Calculator API
+  description: A little web application that offers API calls for arithmetic operations.
+  version: 0.4
+  contact:
+    name: Michael Maeder
+    email: michael.maeder@hefr.ch
+servers:
+  - url: http://localhost:5000/
+
+paths:
+  /inc:
+    get:
+      summary: Incrementation of x by 1
+      parameters:
+        - name: x
+          in: query
+          required: true
+          schema:
+            type: integer
+          description: The integer to increment.
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  x:
+                    type: integer
+        '400':
+          description: Invalid input. x parameter is required.
+  
+  /add:
+    get:
+      summary: Adds x and y
+      parameters:
+        - name: x
+          in: query
+          required: true
+          schema:
+            type: integer
+        - name: y
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful addition
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: integer
+        '400':
+          description: Invalid input. Both x and y parameters are required.
+
+  /mul:
+    get:
+      summary: Multiplies x and y
+      parameters:
+        - name: x
+          in: query
+          required: true
+          schema:
+            type: integer
+        - name: y
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful multiplication
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: integer
+        '400':
+          description: Invalid input. Both x and y parameters are required.
+
+  /div:
+    get:
+      summary: Divides x by y
+      parameters:
+        - name: x
+          in: query
+          required: true
+          schema:
+            type: integer
+        - name: y
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Successful division
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  result:
+                    type: number
+                    format: double
+        '400':
+          description: Invalid input. Both x and y parameters are required.
+
+components:
+  responses:
+    BadRequest:
+      description: Invalid input provided
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error:
+                type: string

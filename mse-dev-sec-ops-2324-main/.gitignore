@@ -1,0 +1,9 @@
+.idea/
+__pycache__/
+.coverage
+.envrc
+.devcontainer/
+
+src/.pdm-python
+.venv
+.pytest_cache/

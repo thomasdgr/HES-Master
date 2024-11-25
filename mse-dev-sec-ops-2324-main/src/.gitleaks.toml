@@ -1,0 +1,4 @@
+[[rules]]
+description = "Manage API keys"
+regex = '''(?i)(api|key|token)'''
+tags = ["key", "API", "token"]

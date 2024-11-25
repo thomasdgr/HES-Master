@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Calculator</title>
+      {% else %}
+      <title>Welcome to Calculator</title>
+      {% endif %}
+    </head>
+    <body>
+        <div>Calculator: 
+            <a href="{{ url_for('index') }}">Home</a>
+            <a href="{{ url_for('login') }}">Login</a>
+        </div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>

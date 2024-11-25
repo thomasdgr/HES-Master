@@ -1,0 +1,95 @@
+.body {
+    align-content: center;
+}
+
+.a {
+    color: #3e7ac9;
+}
+
+.container {
+    width: 95%;
+    margin-top: 30px;
+}
+
+.card-title {
+    padding-bottom: 10px;
+    color: #3e7ac9;
+}
+
+.card-subtitle {
+    padding-bottom: 10px;
+    font-size: 20px;
+    color: #3e7ac9;
+}
+
+.reset.btn, .execute.btn {
+    background-color: #3e7ac9 !important;
+}
+
+.input-field {
+    margin-bottom: -10px;
+}
+
+.input-field input[type=text]:focus+label,
+.materialize-textarea:focus:not([readonly])+label {
+    color: #9e9e9e !important;
+}
+
+.input-field input[type=text]:focus,
+.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #3e7ac9 !important;
+    box-shadow: 0 1px 0 0 #3e7ac9 !important;
+}
+
+.code {
+    color: white;
+    background-color: #343a40;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    word-break: break-word;
+}
+
+.tabs .tab a {
+    color: #9e9e9e !important;
+    font-weight: 500;
+}
+
+.tabs .tab a:hover {
+    background-color: #bfd0e6 !important;
+}
+
+.tabs .tab a:focus {
+    background-color: #bfd0e6 !important;
+}
+
+.tabs .indicator {
+    background-color: #3e7ac9;
+}
+
+.material-icons {
+    line-height: inherit !important;
+    background-color: #ffffff;
+    color: #3e7ac9;
+}
+
+#result-tab {
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.center-align.light-blue.lighten-5 {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 480px;
+    font-family: sans-serif;
+    margin: auto;
+    padding: 20px;
+}
+
+.black-text {
+    display: block;
+    width: 100%;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    white-space: normal;
+}

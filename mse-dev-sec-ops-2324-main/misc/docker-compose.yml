@@ -1,0 +1,10 @@
+version: "3"
+services:
+  nginx:
+    ports:
+      - "80:80"
+    container_name: nginx-1.20.0
+    image: nginx:1.20.0
+    volumes:
+      - .:/usr/share/nginx/html:ro
+

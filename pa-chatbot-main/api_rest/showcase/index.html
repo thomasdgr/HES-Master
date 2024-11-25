@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="icon" href="assets/favicon.png">
+    <title>HEIA-FR Chatbot</title>
+</head>
+
+<body class="light-blue lighten-5">
+    <noscript>
+        <strong>This service needs Javascript to be used.</strong>
+    </noscript>
+    <div class="container">
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div class="card-content black-text">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span class="card-title">HEIA-FR Chatbot</span>
+                        </div>
+                        <p>&nbsp;</p>
+                        <div class="container">
+                            <div class="row">
+                                <div id="ms-tab-chat">
+                                    <span class="card-subtitle">Ragfish</span>
+                                    <div class="input-field col s12" id="chatbox">
+                                        <span class="helper-text">Hello! How can I assist you today?</span>
+                                        <input type="text" size="200" id="chat" placeholder="Type a message..." autocomplete="off">
+                                    </div>
+                                </div>
+                                <p>&nbsp;</p>
+                                <div class="col s12">
+                                    <div class="right-align col s12">
+                                        <p>&nbsp;</p>
+                                        <a class="reset btn" onclick="reset()">Reset</a>
+                                        <a class="execute btn" onclick="fetch()">Submit</a>
+                                    </div>
+                                    <p>&nbsp;</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="result">
+                            <span class="card-title">Result</span>
+                            <div class="card-tabs">
+                                <ul id="ms-tab-result" class="tabs tabs-fixed-width">
+                                    <li class="tab"><a href="#curl-tab">CURL Command</a></li>
+                                    <li class="tab"><a class="active" href="#result-tab">Output</a></li>
+                                </ul>
+                            </div>
+                            <div class="card-content blue-grey lighten-5">
+                                <div id="curl-tab">
+                                    <div class="code">
+                                        <code id="ms-id-curl"></code>
+                                    </div>
+                                </div>
+                                <div id="result-tab">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content black-text">
+                        <span class="card-title">Chatbot description</span>
+                        <span class="card-subtitle">General description</span>
+                        <p>&nbsp;</p>
+                        <p><b>Created by Thomas Dagier (03-2024 - 06.2024).</b></p>
+                        <p>&nbsp;</p>
+                        <p>This microservice expose a chatbot API through a REST API. Made for the HES-SO MSE the project aims to answer questions based
+                        on several adminstrative documents brought by the HEIA-FR in order to help students and staff to find the information they need.</p>
+                        <p>&nbsp;</p>
+                        <span class="card-subtitle">More details</span>
+                        <p>&nbsp;</p>
+                        <p>The microservice expose a RAG system using LLM models. For further information, please refer to the documentation or contact 
+                        thomas.dagierjo@hes-so.ch</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Custom JS -->
+        <script async src="assets/script.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

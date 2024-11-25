@@ -1,0 +1,136 @@
+stages:
+  - build
+  - deploy
+  - test
+  - dast
+  - secret
+  - fuzz
+
+include:
+  - template: Jobs/SAST.gitlab-ci.yml
+  - template: DAST.gitlab-ci.yml
+  - template: Security/API-Fuzzing.gitlab-ci.yml
+  - template: Security/Dependency-Scanning.gitlab-ci.yml
+
+build job:
+  stage: build
+  image: $CI_REGISTRY_IMAGE
+  cache:
+    paths:
+      - .pdm-cache/
+      - src/__pypackages__
+  script:
+    - cd src
+    - pdm install
+    # launch linting
+    - pdm run flake8
+    # launch tests
+    - export PYTHONPATH=.
+    - export FLASK_APP=app
+    - pdm run pytest --cov --cov-report term --cov-report html
+  artifacts:
+      paths:
+        - src/htmlcov/
+
+pages:
+  stage: build
+  dependencies:
+    - build job
+  needs: ["build job"]
+  script:
+    - mv src/htmlcov/ public/
+  artifacts:
+    paths:
+      - public
+    expire_in: 7 days
+  # replaced 'only' with 'except' to exclude the main branch 
+  # from triggering the ci/cd pipeline
+  except:
+    - main
+
+deploy:
+  stage: deploy
+  dependencies:
+    - build job
+  needs: ["build job"]
+  image: docker:24.0.3
+  services:
+    - docker:24.0.3-dind
+  variables:
+    LATEST_IMAGE: $CI_REGISTRY_IMAGE/calculator-app:latest
+  before_script:
+    - cd src
+    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY
+  script:
+    - docker pull $LATEST_IMAGE || true
+    - docker build --network host --cache-from $LATEST_IMAGE -t $LATEST_IMAGE .
+    - docker push $LATEST_IMAGE
+  retry: 2
+
+# Q3.1
+semgrep:
+  image: $CI_REGISTRY_IMAGE/calculator-app:latest
+  stage: test
+  dependencies:
+    - build job
+  needs: ["build job"]
+  script:
+    - cd src
+    - pdm install
+    - pdm run semgrep --config "p/default" --verbose --json -o gl-sast-report.json
+  artifacts:
+    paths:
+      - src/gl-sast-report.json
+
+# Q3.4
+dast:
+  image: ghcr.io/zaproxy/zaproxy:stable
+  stage: dast
+  services: 
+    - name: $CI_REGISTRY_IMAGE/calculator-app:latest
+      alias: calculator-app
+  dependencies:
+    - deploy
+  needs: ["deploy"]
+  script:
+    - echo "Starting DAST scan"
+    - mkdir -p /zap/wrk/
+    - zap-full-scan.py -t http://localhost:5000 -r zap-report.html || true
+#   - zap-baseline.py -t http://localhost:5000 -g gen.conf -r zap-report.html
+    - cp /zap/wrk/zap-report.html .
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main" || $CI_MERGE_REQUEST_ID
+  allow_failure: true
+  artifacts:
+    paths:
+      - zap-report.html
+
+# Q4.1
+gitleaks:
+  stage: secret
+  image: zricethezav/gitleaks:latest
+  script:
+    - gitleaks detect --verbose --redact
+  only:
+    - main
+  allow_failure: true
+
+# Q4.2
+gemnasium-dependency_scanning:
+  image:
+    name: $CI_TEMPLATE_REGISTRY_HOST/security-products/gemnasium-python:4-python-3.10
+  before_script:
+    - cd src
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main" || $CI_MERGE_REQUEST_ID
+
+# Q4.3
+apifuzzer_fuzz :
+  stage: fuzz
+  needs: ["deploy"]
+  services:
+    - name: $CI_REGISTRY_IMAGE/calculator-app:latest
+      alias: calculator-app 
+  variables:
+    FUZZAPI_TARGET_URL: http://localhost:5000
+    FUZZAPI_OPENAPI: src/fuzz_spec.yml

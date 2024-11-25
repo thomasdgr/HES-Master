@@ -1,0 +1,162 @@
+[gd_scene load_steps=13 format=3 uid="uid://b1j5liek54gkl"]
+
+[ext_resource type="FontFile" uid="uid://dpmnpum5r84nt" path="res://We Love Peace.ttf" id="1_bqqyc"]
+[ext_resource type="Script" path="res://scenes/menu.gd" id="1_ehwax"]
+[ext_resource type="PackedScene" uid="uid://dbytvkfs2d4pa" path="res://scenes/donut.glb" id="2_6fabj"]
+[ext_resource type="AudioStream" uid="uid://bt2qhwh15fdlr" path="res://assets/sound.mp3" id="4_op02t"]
+[ext_resource type="PackedScene" uid="uid://b013fyrgscynu" path="res://scenes/polygon_city.tscn" id="5_t2mqj"]
+
+[sub_resource type="FontVariation" id="FontVariation_vphev"]
+base_font = ExtResource("1_bqqyc")
+
+[sub_resource type="FontVariation" id="FontVariation_3by5l"]
+base_font = ExtResource("1_bqqyc")
+
+[sub_resource type="FontVariation" id="FontVariation_qksip"]
+base_font = ExtResource("1_bqqyc")
+
+[sub_resource type="FontVariation" id="FontVariation_hmr42"]
+base_font = ExtResource("1_bqqyc")
+
+[sub_resource type="Animation" id="Animation_q58fe"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer2/SubViewportContainer/SubViewport/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 2.92877)]
+}
+
+[sub_resource type="Animation" id="Animation_gu147"]
+resource_name = "move"
+length = 9.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MarginContainer2/SubViewportContainer/SubViewport/Camera3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 3, 4.5, 6, 7.5, 9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 2.92877), Vector3(-2.28326, 0, 2.92877), Vector3(0.375484, 0.352539, 2.72102), Vector3(0.375484, -0.680219, 2.72102), Vector3(1.78901, -0.852807, 2.92877), Vector3(-1.71879, -0.766105, 2.72102), Vector3(0, 0, 2.92877)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_eepj7"]
+_data = {
+"RESET": SubResource("Animation_q58fe"),
+"move": SubResource("Animation_gu147")
+}
+
+[node name="menu" type="CanvasLayer"]
+script = ExtResource("1_ehwax")
+
+[node name="MarginContainer2" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="MarginContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="SubViewport" type="SubViewport" parent="MarginContainer2/SubViewportContainer"]
+handle_input_locally = false
+msaa_2d = 1
+msaa_3d = 1
+use_taa = true
+use_debanding = true
+use_occlusion_culling = true
+size = Vector2i(3200, 2000)
+render_target_update_mode = 4
+
+[node name="donut" parent="MarginContainer2/SubViewportContainer/SubViewport" instance=ExtResource("2_6fabj")]
+transform = Transform3D(0.253812, 0.0622501, -0.147324, -0.158537, 0.134391, -0.216345, 0.0211054, 0.260891, 0.146597, 0, -0.381366, 0)
+
+[node name="Camera3D" type="Camera3D" parent="MarginContainer2/SubViewportContainer/SubViewport"]
+transform = Transform3D(1, 0, 0, 0, 0.990899, 0.134609, 0, -0.134609, 0.990899, 0, 0, 2.92877)
+
+[node name="sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_op02t")
+autoplay = true
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_vphev")
+theme_override_font_sizes/font_size = 80
+text = "Pro PATROL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="btn_start" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = SubResource("FontVariation_3by5l")
+toggle_mode = true
+text = "START"
+
+[node name="btn_exit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = SubResource("FontVariation_qksip")
+toggle_mode = true
+text = "EXIT"
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+
+[node name="btn_niveau" type="Button" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_fonts/font = SubResource("FontVariation_3by5l")
+toggle_mode = true
+text = "LEVEL"
+
+[node name="btn_music" type="CheckButton" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+theme_override_fonts/font = SubResource("FontVariation_hmr42")
+button_pressed = true
+action_mode = 0
+text = "SOUND"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "move"
+speed_scale = 2.0
+libraries = {
+"": SubResource("AnimationLibrary_eepj7")
+}
+
+[node name="POLYGON_City_Demo_Scene" parent="." instance=ExtResource("5_t2mqj")]
+transform = Transform3D(0.962066, 0.0596249, 0.266222, -4.4607e-10, 0.975826, -0.218552, -0.272818, 0.210261, 0.938808, 4.9534, -33.5857, -159.191)

@@ -1,0 +1,54 @@
+---
+author: # Les différents auteurs
+- THOMAS DAGIER
+title: "RAGFISH - Fishing the right answer for retrieval augmented generation" # Le titre complet du travail
+smallTitle: "RAGFISH" # Le "petit" titre du travail (qui sera affiché en haut de chaque page)
+institute: Haute École Spécialisée de Suisse Occidentale
+name: Thomas
+surname: DAGIER
+keywords: [Rapport, Projet d'approfondissement, RAG, LLM, Master, HES-SO] # Mots-clés qui apparaîtront dans les métadonnées du PDF
+orientation: Computer-Science (CS)
+projectMonth: June 01
+year: 2024
+sensei: Prof. Dr. Jean Hennebert
+#externalExpert: John Doe # Decommenter aussi les lignes 362-364 de default.latex
+#advisorResearchUnit: Place research unit here # Decommenter aussi les lignes 360-361 de default.latex
+#frontLogoLegend: "Légende et source de l'illustration de couverture tirée de ... disponible à l'adresse: " # La légende de l'image de couverture
+#frontLogoSourceURL: "www.my_url.com" # La source de l'image de couverture
+#dedicace: A tous ceux qui m’ont soutenu : merci.
+workTitle: Projet d'Approfondissement # checker la ligne 327 de default.latex (au cas où le titre change)
+workFor: Master of Science HES-SO in Engineering
+bibliography: my.bib
+csl: iso690.csl
+biblio-title: Références bibliographiques
+link-citations: true
+autoSectionLabels: false
+autoEqnLabels: true
+lang: fr
+documentclass: report
+papersize: A4
+cref: false
+fontsize: 12pt
+geometry:
+- left=25mm
+- right=25mm
+- headheight=25mm
+- top=25mm
+- bottom=25mm
+toc: true
+toc-depth: 2
+header-includes: |
+    \usepackage{fontspec}
+    \usepackage{graphicx}
+    \usepackage{sectsty}
+    \usepackage{enumitem}
+    \usepackage[toc]{glossaries}
+    \usepackage{wrapfig}
+    \usepackage{subcaption}
+    
+    \makenoidxglossaries
+    \sectionfont{\fontsize{12}{15}\selectfont}
+    \subsectionfont{\fontsize{12}{15}\selectfont}
+    \setlist[itemize]{label=\textbullet}
+    \input{text/ZZ-glossaire.tex}
+---

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% autoescape false %}
+        <h1>Calculator app</h1>
+        Hi {{ app_data.username }}
+    {% endautoescape %}
+{% endblock %}

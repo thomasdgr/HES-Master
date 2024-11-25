@@ -1,0 +1,47 @@
+Id, Filière, Matière, Type, Non Prénom du ou des profs, Classe, Date, Heure début, Heure fin, Salles, Surveillants, Experts
+9745271332, Informatique et systèmes de communication, Analysis 1, Ecrit, "Wasem Micha", ISC-1d, 5/2/2024, 8:30, 11:30, C20.22, ,
+9745264268, Génie électrique, Analysis 1, Ecrit, "Wasem Micha", E-1d, 5/2/2024, 8:30, 11:30, C20.22, ,
+9745253698, Génie civil, Analysis 1, Ecrit, "Wasem Micha", G-1d, 5/2/2024, 8:30, 11:30, C20.22, ,
+9745250301, Chimie, Analysis 1, Ecrit, "Wasem Micha", C-1d, 5/2/2024, 8:30, 11:30, C20.22, ,
+9745265368, Génie électrique, Analysis 3, Ecrit, "Wasem Micha", E-2d, 5/2/2024, 13:30, 16:30, AEG, ,
+9745254754, Génie civil, Analysis 3, Ecrit, "Hager Jörin Corinne", G-2d, 5/2/2024, 13:30, 16:30, AEG, ,
+9745254736, Génie civil, Analyse 3, Ecrit, "Hager Jörin Corinne", G-2a, 5/2/2024, 13:30, 16:30, AEG, ,
+9745251353, Chimie, Analysis 3, Ecrit, "Hager Jörin Corinne", C-2d, 5/2/2024, 13:30, 16:30, AEG, ,
+9745271281, Informatique et systèmes de communication, Analyse 1, Ecrit, "Clerc Thomas", ISC-1b, 5/2/2024, 8:30, 11:30, C30.06, ,
+9745264255, Génie électrique, Analyse 1, Ecrit, "Hebeisen Christophe", E-1b, 5/2/2024, 8:30, 11:30, AEG, ,
+9745253675, Génie civil, Analyse 1, Ecrit, "Hebeisen Christophe", G-1a /G-1b, 5/2/2024, 8:30, 11:30, AEG, ,
+9745273023, Informatique et systèmes de communication, Mathématiques spécifiques 1, Ecrit, "Clerc Thomas", ISC-ID-2a, 5/2/2024, 13:30, 16:30, C20.22, ,
+9745273028, Informatique et systèmes de communication, Mathématiques spécifiques 1, Ecrit, "Baltensperger Richard", ISC-IL-2a /ISC-RS-2a, 5/2/2024, 13:30, 16:30, C20.12, ,
+9745265350, Génie électrique, Analyse 3, Ecrit, "Tornay Lucie", E-2a, 5/2/2024, 13:30, 16:30, C20.06, ,
+9745250288, Chimie, Analyse 1, Ecrit, "Tornay Lucie", C-1a, 5/2/2024, 8:30, 11:30, C20.06, ,
+9745271298, Informatique et systèmes de communication, Analyse 1, Ecrit, "Baltensperger Richard", ISC-1a, 5/2/2024, 8:30, 11:30, C20.12, ,
+9745264244, Génie électrique, Analyse 1, Ecrit, "Roubaty Quentin", E-1a, 5/2/2024, 8:30, 11:30, C30.12, ,
+9745251335, Chimie, Analyse 3, Ecrit, "Roubaty Quentin", C-2a, 5/2/2024, 13:30, 16:30, D30.22, ,
+9745251532, Chimie, Analyses spectrales, Ecrit, "Allemann Christophe", C-2a/ C-2d, 6/2/2024, 14:00, 17:00, AEG, ,
+9745252284, Chimie, Techniques de réactions 1, Ecrit, "Chappuis Thierry", C-3, 6/2/2024, 8:30, 11:30, D00.16, ,
+9745266602, Génie électrique, Electronique de puissance 1, Ecrit, "Kneuss André", E-3n, 7/2/2024, 8:30, 11:30, D30.12, ,
+9745266322, Génie électrique, Traitement du signal, Ecrit, "Nicchiotti Gianluca", E-3l, 6/2/2024, 9:00, 11:30, C20.18, ,
+9745266506, Génie électrique, Réseaux électriques 1, Ecrit, "Favre-Perrod Patrick", E-3n, 5/2/2024, 8:30, 11:30, D30.08, ,
+9745266541, Génie électrique, Elektrische Netze 1, Ecrit, "Favre-Perrod Patrick", E-3n, 5/2/2024, 8:30, 11:30, D30.08, ,
+9892174315, Génie électrique, Electromécanique 1, Ecrit, "Cajander David", E-2a, 7/2/2024, 13:30, 16:30, AEG, ,
+9745266558, Génie électrique, Electromécanique et entraînements électriques 1, Ecrit, Cajander David/Y. Birbaum, E-3n, 6/2/2024, 8:30, 11:30, D30.08, ,
+9745264365, Génie électrique, Electricité 1, Ecrit, "Lalou Moncef Justin", E-1d, 6/2/2024, 8:30, 11:30, C20.06, ,
+9745264455, Génie électrique, Informatique de base, Ecrit, "Oberson Daniel", E-1d, 7/2/2024, 8:30, 11:30, AEG, ,
+9745264465, Génie électrique, Informatique de base, Ecrit, "Silva Eric", E-1a, 7/2/2024, 8:30, 11:30, AEG, ,
+9745264360, Génie électrique, Electricité 1, Ecrit, "Preda Ioana", E-1a, 9/2/2024, 8:30, 11:00, C20.22, ,
+9745255730, Génie civil, Routes et transports 2, Oral, "Conforti César/Fénart Marc-Antoine/Ruffieux Hervé", G-3, 6/2/2023, 9:00, 16:00, C30.06, ,M. Grisanti
+9745255730, Génie civil, Routes et transports 2, Oral, "Conforti César/Fénart Marc-Antoine/Ruffieux Hervé", G-3, 7/2/2023, 9:00, 16:00, C30.06, ,M. Grisanti
+9745255801, Génie civil, Construction en béton 3, Oral, "Redaelli Dario", G-3, 8/2/2023, 9:00, 16:00, C30.16, ,L. Tassinari
+9745255801, Génie civil, Construction en béton 3, Oral, "Redaelli Dario", G-3, 9/2/2023, 9:00, 16:00, C30.16, ,L. Tassinari
+9745255881, Génie civil, Ouvrages géotechniques, Oral, "Labiouse Vincent", G-3, 7/2/2023, 9:00, 16:00, D20.12, ,S. Commend
+9745255881, Génie civil, Ouvrages géotechniques, Oral, "Labiouse Vincent", G-3, 8/2/2023, 9:00, 16:00, D20.12, ,S. Commend
+9745265448, Génie électrique, Electronique 1, Oral, "(Pirrami Lorenzo)/P. Bucella", E-2a, 6/2/2024, 8:00, 16:00, D30.16, , M. Mazza
+9745266282, Génie électrique, Circuits intégrés et à haute fréquence, Oral, "Buccella Pietro/Mazza Marco", E-3l, 5/2/2024, 8:30, 17:00, C30.016, ,"Buccella Pietro/Mazza Marco"
+9745273073, Informatique et systèmes de communication, Systèmes concurrents, Oral, "Mäder Michael", ISC-IL-2a, 9/2/2024, 8:00, 17:00, D30.22, "Bovey Patrick",
+9745273063, Informatique et systèmes de communication, Systèmes concurrents, Oral, "Bovey Patrick", ISC-ID-2a, 9/2/2024, 8:00, 17:00, D30.22, "Mäder Michael",
+9745273063, Informatique et systèmes de communication, Systèmes concurrents, Oral, "Bovey Patrick", ISC-ID-2a, 8/2/2024, 8:00, 17:00, D30.22, "Mäder Michael",
+9745273073, Informatique et systèmes de communication, Systèmes concurrents, Oral, "Mäder Michael", ISC-IL-2a, 8/2/2024, 8:00, 17:00, D30.22, "Bovey Patrick",
+9893686134, Chimie, Chimie organique 3, Oral, "Mamula Steiner Olimpia", C-2a, 7/2/2024, 8:00, 17:00, D20.08, ,Angélique moillet
+9745250486, Chimie, Chimie organique 1, Oral, "Lucarini Fiorella", C-1a, 8/2/2024, 9:00, 17:00, C20.22, ,Ch. Allemann
+9745250486, Chimie, Chimie organique 1, Oral, "Lucarini Fiorella", C-1a, 7/2/2024, 9:00, 17:00, C20.22, ,O. Mamula-Steiner
+9745251513, Chimie, Analyse instrumentale, Oral, "Portmann Cyril", C-2a, 9/2/2024, 8:00, 17:00, C20.06, ,F. Lucarini

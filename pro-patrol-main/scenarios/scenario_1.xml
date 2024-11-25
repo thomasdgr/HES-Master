@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scenario>
+    <name text="Contrôle facile"/>
+    <spawn position="(-77,2,61)"/>
+    <events>
+        <event time="0" action="spawn_npc" npcId="1" position="(-77,1,57)" path="to_player" goal="dialog">
+            <dialog>
+                <dialogInstance id="0" text="Bonjour, comment puis-je vous aider?" time="10">
+                    <response text="Bonnjour, pouvez vous présenter une pièce d'identité?" points="0" next="1" action="present_id" />
+                    <response text="Bonjour, pouvez vous présenter votre carte grise?" points="5" next="-1"  action="end_level"/>
+                </dialogInstance>
+                <dialogInstance id="1" text="Tenez monsieur, voici ma carte d'identité" time="8">
+                    <response text="Tout a l'air juste, bonne journée!" points="0" next="2"/>
+                    <response text="Quelque chose cloche avec votre carte...." points="5" next="-1" action="end_level"/>
+                </dialogInstance>
+                <dialogInstance id="2" text="Merci, vous aussi!" time="8">
+                    <response text="Ok" points="0" next="-1" action="end_level"/>
+                </dialogInstance>
+                <dialogInstance id="3" text="Comment ça, elle est correcte!" time="5">
+                    <response text="..." points="0" next="-1" action="end_level"/>
+                </dialogInstance>
+            </dialog>
+        </event>
+    </events>
+</scenario>

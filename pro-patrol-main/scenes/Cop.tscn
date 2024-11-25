@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3fkug478xiy0"]
+
+[ext_resource type="Script" path="res://scripts/Cop.gd" id="1_0na6c"]
+[ext_resource type="PackedScene" uid="uid://vgds4rtmnvst" path="res://assets/scene.gltf" id="2_057vd"]
+[ext_resource type="PackedScene" uid="uid://clxgiq68w5tir" path="res://SourceFiles/Characters/business_shirt.glb" id="3_ih0bw"]
+[ext_resource type="AudioStream" uid="uid://dsqgauw011w5y" path="res://sounds/footstep.wav" id="4_mbr2n"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_sn87m"]
+radius = 16.7217
+height = 75.7368
+
+[node name="Cop" type="CharacterBody3D"]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+script = ExtResource("1_0na6c")
+
+[node name="Pivot" type="Node3D" parent="."]
+
+[node name="Character" parent="Pivot" instance=ExtResource("2_057vd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.239453, 0, -0.00839114)
+visible = false
+
+[node name="business_shirt" parent="Pivot" instance=ExtResource("3_ih0bw")]
+transform = Transform3D(0.0454327, 0, 0.998967, 0, 1, 0, -0.998967, 0, 0.0454327, 0, 0, 0)
+
+[node name="talk" type="AudioStreamPlayer" parent="Pivot/business_shirt"]
+
+[node name="footstep" type="AudioStreamPlayer3D" parent="Pivot/business_shirt"]
+transform = Transform3D(0.454327, 0, -9.98968, 0, 10, 0, 9.98968, 0, 0.454327, 0, 0, 0)
+stream = ExtResource("4_mbr2n")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24582, 29.9755, 2.84802)
+shape = SubResource("CapsuleShape3D_sn87m")
+
+[node name="VisibleOnScreenNotifier3D" type="VisibleOnScreenNotifier3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.14838, 29.83, -1.63343)
+aabb = AABB(-15.7084, -38.1649, -12.3332, 31.4167, 76.3297, 24.6665)
